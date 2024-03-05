@@ -1,0 +1,50 @@
+{
+    "Page {page} of {pages}": "Page {page} of {pages}",
+    "Older Articles": "Older Articles",
+	"Newer Articles": "Newer Articles",
+    "0 Articles": "0 Articles",
+    "1 Article": "1 Article",
+    "% Articles": "% Articles",
+    "0 Posts": "0 Posts",
+    "A collection of <b>1 post</b>": "A collection of <b>1 post</b>",
+    "A collection of <b>% posts</b>": "A collection of <b>% posts</b>",
+    "1 min read": "1 min read",
+    "% min read": "% min read",
+    "Last Update:": "Last Update:",
+    "Author:": "Author:",
+    "Reading time:": "Reading time:",
+    "Published:": "Published:",
+    "Image of: {article_title}": "Image of: {article_title}",
+
+    "Subscribe": "Subscribe",
+    "Join Now": "Join Now",
+
+    "Login": "Login",
+
+	"Comments": "Comments",
+	"Go to comments": "Go to comments",
+	"Previous Article": "Previous Article",
+	"Next Article": "Next Article",
+    "Featured Article": "Featured Article",
+
+	"Location": "Location",
+	"Website": "Website",
+    "Follow on {network}": "Follow on {network}",
+
+    "Share Article:": "Share Article:",
+    "Tagged in:": "Tagged in:",   
+    
+    "Members Article": "Members Article",
+    "Premium Article": "Premium Article",
+    "My Account": "My Account",
+    "Sign Out": "Sign Out",
+    "Sign In": "Sign In",
+    "Let's talk": "Let's talk",
+    
+    "This article is for paid members only": "This article is for paid members only",
+    "To continue reading this article, upgrade your account to get full access.": "To continue reading this article, upgrade your account to get full access.",
+    "This article is for subscribers only": "This article is for subscribers only",
+    "To continue reading this article, just register your email and we will send you access.": "To continue reading this article, just register your email and we will send you access.",
+    "This post is for subscribers on our tiers:": "This post is for subscribers on our tiers:",
+    " and ": " and "
+}

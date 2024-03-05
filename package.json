@@ -1,0 +1,76 @@
+{
+	"name": "suhka-lite",
+	"version": "1.0.1",
+	"demo": "https://ghost.estudiopatagon.com/suhka-lite",
+    "engines": {
+        "ghost": ">=5.0.0"
+    },
+	"author": {
+		"name": "Estudio Patagon",
+        "email": "admin@estudiopatagon.com",
+        "url": "https://estudiopatagon.com"
+	},
+	"gpm": {
+        "type": "theme",
+        "categories": [
+            "Minimal",
+            "Magazine"
+        ]
+    },
+	"config": {
+        "posts_per_page": 6,
+        "image_sizes": {
+            "thumbnail": {
+                "width": 120,
+                "height": 120
+            },
+            "medium": {
+                "width": 300,
+                "height": 300
+            },
+            "loop_classic": {
+                "width": 660,
+                "height": 660
+            },
+            "loop_grid": {
+                "width": 550
+            },
+            "classic": {
+                "width": 1075
+            }
+        },
+        "card_assets": true,
+        "custom": {
+            "enable_grayscale_effect": {
+                "type": "boolean",
+                "default": true,
+                "description": "Transform your posts list images to grayscale."
+            },
+            "enable_excerpt": {
+                "type": "boolean",
+                "default": false,
+                "description": "Enable the excerpt in the posts list."
+            },
+            "secondary_color": {
+                "type": "color",
+                "default": "#FDFBF9",
+                "description": "Default: #FDFBF9, used for buttons."
+            },
+            "background_color": {
+                "type": "color",
+                "default": "#FAF2EA",
+                "description": "Default: #FAF2EA"
+            },
+            "border_color": {
+                "type": "color",
+                "default": "#524D4E",
+                "description": "Default: #524D4E, used for the border of input fields, images, and others."
+            }           
+        }
+    },
+    "keywords": [
+        "ghost",
+        "theme",
+        "ghost-theme"
+    ]
+}

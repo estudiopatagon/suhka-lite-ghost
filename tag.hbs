@@ -1,0 +1,39 @@
+{{!< default}}
+
+<main id="archives" class="main">
+
+    <div class="grid-container grid-medium">
+
+        {{#tag}}
+            <div class="tag-description epcl-flex {{^if feature_image}}no-image{{/if}}">
+                <div class="left epcl-flex">
+                    {{#if feature_image}}
+                        <div class="category-image ctag-{{slug}}"><img src="{{img_url feature_image size="medium"}}" fetchpriority="high" decoding="async"></div>
+                    {{else}}
+                        <div class="category-image ctag-{{slug}}"><svg class="icon"><use xlink:href="{{asset 'images/svg-icons.svg#fill-tag-icon'}}"></use></svg></div>
+                    {{/if}} 
+                    <h1 class="title usmall fw-normal no-margin"><span class="title large no-margin">{{name}}</span>{{plural ../pagination.total empty=(t "0 Posts") singular=(t "A collection of <b>1 post</b>") plural=(t "A collection of <b>% posts</b>")}}</h1>
+                    {{!-- <div class="epcl-decoration-counter">{{../pagination.total}}</div> --}}
+                </div>
+                {{#if description}}
+                    <div class="right">
+                        <p>{{description}}</p>
+                    </div>
+                {{/if}}
+                <div class="clear"></div>
+            </div>
+         
+        {{/tag}}
+
+    </div>
+
+    <div id="post-list" class="grid-container">
+        <!-- start: .content-wrapper -->
+        <div class="content-wrapper content">      
+            {{> home-blocks/grid-posts}}
+            <div class="clear"></div>            
+        </div>
+        <!-- end: .content-wrapper -->
+    </div>
+
+</main>

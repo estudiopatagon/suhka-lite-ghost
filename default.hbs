@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+<head>
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+
+    {{!-- Node JS (Windows Local mode) do not link these files automatically --}}
+    {{!-- <script defer src="/public/cards.min.js?v=eb2c0a021c"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=eb2c0a021c"> --}}
+
+    {{> head}}
+
+    {{ghost_head}}
+
+</head>
+<body class="{{#if @site.cover_image}}cover{{/if}} {{body_class}}" {{#if @site.cover_image}}style="background: url({{@site.cover_image}}) no-repeat center center fixed;"{{/if}}>
+    
+    <img loading="eager" fetchpriority="high" src="{{asset 'images/svg-icons.svg'}}" alt="Social Icons" style="display:none;">
+
+    <!-- start: .mobile.main-nav -->
+    <nav class="mobile main-nav">
+        <div class="close"><svg class="icon"><use xlink:href="{{asset 'images/svg-icons.svg#close-icon'}}"></use></svg></div>
+        {{>site-logo}}
+        {{navigation}}
+        <div class="account">          
+            {{#if @member}}
+                <a data-members-signout class="link-button">{{t "Sign Out"}}</a>
+                <a href="javascript:void(0)" data-portal="account" class="epcl-button">{{t "My Account"}}</a>                
+            {{else}}
+                <a href="{{@site.url}}/signin" class="link-button">
+                    {{t "Login"}}
+                </a>
+                <a href="{{@site.url}}/subscribe" class="epcl-button">
+                    {{t "Subscribe"}}
+                </a>                                                           
+            {{/if}}
+        </div>
+    </nav>
+    <!-- end: .mobile.main-nav -->
+    <div class="menu-overlay"></div>
+
+	<!-- start: #wrapper -->
+	<div id="wrapper">
+
+		{{> header}}
+
+        {{{body}}}
+
+		{{> footer}}        
+
+    </div>
+    <!-- end: #wrapper -->
+
+    {{ghost_foot}}
+
+    {{!-- Theme Scripts --}}
+    <script defer src="{{asset 'dist/scripts.min.js' }}"></script>
+
+
+</body>
+</html>

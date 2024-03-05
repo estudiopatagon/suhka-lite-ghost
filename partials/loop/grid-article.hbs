@@ -1,0 +1,38 @@
+<article
+    class="default grid-33 tablet-grid-50 mobile-grid-100 np-mobile ctag-{{primary_tag.slug}} post-access-{{visibility}} {{^if feature_image}}no-image{{/if}}">
+    <header>
+        <div class="post-format-image">
+            <div class="featured-image">
+                {{#if feature_image}}
+                    <a href="{{url}}" class="thumb epcl-loader translate-effect grayscale-effect">
+                        {{#if @first}}
+                            <img loading="eager" src="{{img_url feature_image size="loop_grid" }}" alt="{{t "Image of: {article_title}" article_title=title }}" width="368" height="368">
+                        {{else}}
+                            <img loading="lazy" decoding="async" fetchpriority="low" src="{{img_url feature_image size="loop_grid" }}" alt="{{t "Image of: {article_title}" article_title=title }}" width="368" height="368">
+                        {{/if}}
+                        <span class="screen-reader-text">{{title}}</span>
+                    </a>
+                {{/if}}
+            </div>
+            <div class="info">
+                <h2 class="main-title title underline-effect"><a href="{{url}}">{{title}}</a></h2>
+            </div>
+        </div>
+
+    </header>
+    
+    <div class="post-excerpt">
+        {{#if @custom.enable_excerpt}}
+            <p>{{excerpt characters="100"}}...</p>
+        {{/if}}
+        <!-- start: .meta -->
+        <div class="meta">
+            {{> meta-data/date }}
+            <div class="clear"></div>
+        </div>
+        <!-- end: .meta -->
+
+        <div class="clear"></div>
+    </div>
+
+</article>

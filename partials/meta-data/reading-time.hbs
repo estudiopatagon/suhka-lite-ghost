@@ -1,0 +1,7 @@
+
+{{#if reading_time}}
+    <div class="min-read meta-info">
+        <svg class="icon main-color"><use xlink:href="{{asset 'images/svg-icons.svg#reading-icon'}}"></use></svg>
+ {{reading_time minute=(t "1 min read") minutes=(t "% min read")}}
+    </div>
+{{/if}}

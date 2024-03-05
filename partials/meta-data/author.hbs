@@ -1,0 +1,8 @@
+{{#foreach authors limit="1" }}
+    <a href="{{url}}" class="author meta-info">                                        
+        {{#if profile_image}}
+            <img class="author-image cover" loading="lazy" fetchpriority="low" decoding="async" src="{{img_url profile_image size="thumbnail"}}" alt="{{t "Image of: "}}{{name}}">                      
+        {{/if}}                    
+        <span class="author-name">{{name}}</span>
+    </a>
+{{/foreach}}

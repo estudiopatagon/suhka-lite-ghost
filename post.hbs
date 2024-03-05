@@ -1,0 +1,126 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{#post}}
+
+<!-- start: #single -->
+<main id="single" class="main grid-container no-sidebar classic">
+
+    <!-- start: .center -->
+    <div class="center content">
+
+        <!-- start: .content -->
+        <div class="left-content np-mobile">
+
+            <article class="main-article section post-access-{{visibility}} primary-tag-{{primary_tag.slug}} {{post_class}}">
+
+                <header>      
+                    <div class="info textcenter">    
+                        <h1 class="main-title title ularge">{{title}}</h1>  
+                        <!-- start: .meta -->
+                        <div class="meta small">
+                            <time class="fw-normal" datetime="{{date format='YYYY-MM-DD'}}">
+                                <strong>{{t "Published:"}}</strong> {{date format="MMMM DD, YYYY"}}
+                            </time>
+                            {{> meta-data/author}}
+                        </div>
+                        <!-- end: .meta -->   
+                        <div class="clear"></div>     
+                    </div>
+                    {{#if feature_image}}
+                        <div class="featured-image">
+                            <img class="fullwidth" src="{{img_url feature_image size="classic"}}" fetchpriority="high" decoding="async" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}">
+                            <p class="featured-image-caption textcenter border-effect">{{feature_image_caption}}</p>
+                        </div>
+                    {{/if}}         
+                    <div class="clear"></div>
+                </header>
+
+                <section class="post-content">
+                    {{#if access}}
+                        <div class="text">{{content}}</div>      
+                        <div class="bottom-tags textcenter border-effect">       
+                            {{#if tags}}                
+                                <div class="tags-list">
+                                    <p><strong>{{t "Tagged in:"}}</strong></p> 
+                                    {{tags separator=", "}}
+                                </div>  
+                            {{/if}} 
+                            <p class="last-update"><strong>{{t "Last Update:"}}</strong> {{date updated_at format="MMMM DD, YYYY"}}</p>                          
+                        </div>  
+                        <!-- start: .share-buttons -->
+                        <div class="share-buttons epcl-social-buttons fill-color">
+                            <h5 class="title usmall fw-semibold">{{t "Share Article:"}}</h5>                            
+                            <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" target="_blank">
+                                <svg class="icon"><use xlink:href="{{asset 'images/svg-icons.svg#facebook-icon'}}"></use></svg>
+                            </a>
+                            <a class="twitter" href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}" target="_blank">
+                                <svg class="icon"><use xlink:href="{{asset 'images/svg-icons.svg#twitter-icon'}}"></use></svg>
+                            </a>                        
+                            <a class="whatsapp" href="https://api.whatsapp.com/send?text={{url absolute="true"}}" target="_blank" data-action="share/whatsapp/share">
+                                <svg class="icon"><use xlink:href="{{asset 'images/svg-icons.svg#whatsapp-icon'}}"></use></svg>
+                            </a>
+                            <a class="email" href="mailto:?subject={{encode title}}&body={{url absolute="true"}}" target="_blank">
+                            <svg class="icon"><use xlink:href="{{asset 'images/svg-icons.svg#email-icon'}}"></use></svg>
+                            </a>
+                            <div class="clear"></div>
+                        </div>
+                        <!-- end: .share-buttons -->                        
+                    {{else}}
+                        {{> content-cta}}
+                    {{/if}}
+                </section>
+
+            </article>
+
+            <div class="clear"></div>
+
+            <section class="siblings epcl-flex" id="epcl-other-stories">
+                {{#prev_post}}
+                    <article class="prev epcl-flex translate-effect ctag-{{primary_tag.slug}} {{post_class}}">
+                        <div class="info">
+                            <p>{{t "Previous Article"}}</p>
+                            <h4 class="title small">{{title}}</h4>
+                        </div>
+                        <a href="{{url}}" class="full-link"></a>
+                    </article>
+                {{/prev_post}}
+                
+                {{#next_post}}
+                <div class="separator hide-on-mobile"></div>
+                    <article class="next epcl-flex translate-effect ctag-{{primary_tag.slug}} {{post_class}}">
+                        <div class="info">
+                            <p>{{t "Next Article"}}</p>
+                            <h4 class="title small">{{title}}</h4>
+                        </div>
+                        <a href="{{url}}" class="full-link"></a>
+                    </article>
+                {{/next_post}}
+                <div class="clear"></div>                              
+            </section>
+               
+            <div class="clear"></div>
+            
+            {{#if access}}
+                <!-- start: #comments -->
+                <div id="comments" class="section np-bottom">
+                    {{!-- <h3 class="title medium fw-black"><span>{{t "Comments" }}</span></h3> --}}
+                    {{comments title="" count=false mode="auto"}}                
+                </div>
+                <!-- end: #comments -->    
+            {{/if}}    
+
+        </div>
+        <!-- end: .content -->           
+
+        <div class="clear"></div>
+
+    </div>
+    <!-- end: .center -->
+
+</main>
+<!-- end: #single -->
+
+{{/post}}

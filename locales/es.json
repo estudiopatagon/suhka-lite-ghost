@@ -1,0 +1,50 @@
+{
+    "Page {page} of {pages}": "Página {page} de {pages}",
+    "Older Articles": "Anterior",
+	"Newer Articles": "Siguiente",
+    "0 Articles": "0 Artículos",
+    "1 Article": "1 Artículo",
+    "% Articles": "% Artículos",
+    "0 Posts": "0 Artículos",
+    "A collection of <b>1 post</b>": "Una colección de <b>1 artículo</b>",
+    "A collection of <b>% posts</b>": "Una colección de <b>% artículos</b>",
+    "1 min read": "1 min lectura",
+    "% min read": "% min lectura",
+    "Last Update:": "Última Actualización:",
+    "Author:": "Autor:",
+    "Reading time:": "Lectura:",
+    "Published:": "Publicado:",
+    "Image of: {article_title}": "Imagen de: {article_title}",
+
+    "Subscribe": "Suscríbete",
+    "Join Now": "Únete Ahora",
+
+    "Login": "Iniciar Sesión",
+
+	"Comments": "Comentarios",
+	"Go to comments": "Ir a los comentarios",
+	"Previous Article": "Artículo Anterior",
+	"Next Article": "Artículo Siguiente",
+    "Featured Article": "Artículo Destacado",
+
+	"Location": "Ubicación",
+	"Website": "Sitio Web",
+    "Follow on {network}": "Sígueme en {network}",
+
+    "Share Article:": "Compartir Artículo:",
+    "Tagged in:": "Categorizado en:",   
+    
+    "Members Article": "Artículo para Suscriptores",
+    "Premium Article": "Artículo Premium",
+    "My Account": "Mi Cuenta",
+    "Sign Out": "Cerrar Sesión",
+    "Sign In": "Iniciar Sesión",
+    "Let's talk": "Hablemos",
+    
+    "This article is for paid members only": "Este artículo es para usuarios con membresía",
+    "To continue reading this article, upgrade your account to get full access.": "Para continuar leyendo este artículo, actualiza tu cuenta para obtener acceso.",
+    "This article is for subscribers only": "Este artículo es para suscriptores",
+    "To continue reading this article, just register your email and we will send you access.": "Para continuar leyendo este artículo, tan solo registra tu correo electrónico y te enviaremos acceso.",
+    "This post is for subscribers on our tiers:": "Este artículo es para suscriptores de los niveles:",
+    " and ": " y "
+}

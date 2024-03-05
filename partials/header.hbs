@@ -1,0 +1,55 @@
+<!-- start: #header -->
+<header id="header" class="classic">
+
+	<div class="menu-mobile">
+        <svg class="icon ularge open"><use xlink:href="{{asset 'images/svg-icons.svg#menu-icon'}}"></use></svg>
+        <svg class="icon ularge close"><use xlink:href="{{asset 'images/svg-icons.svg#close-icon'}}"></use></svg>
+    </div>
+
+	<!-- start: .menu-wrapper -->
+	<div class="menu-wrapper">
+
+        <div class="top underline-effect hide-on-mobile hide-on-tablet hide-on-desktop-sm">    
+            <div class="grid-container">      
+                <span data-ghost-search class="epcl-search-button"><svg class="icon large"><use xlink:href="{{asset 'images/svg-icons.svg#search-icon'}}"></use></svg></span>
+                {{#if @member}}
+                    <a data-members-signout class="link-button">{{t "Sign Out"}}</a>
+                    <a href="javascript:void(0)" data-portal="account" class="epcl-button">
+                        {{t "My Account"}}
+                    </a>                                            
+                {{else}}
+                    <a data-portal="signin" class="link-button epcl-login">
+                        {{t "Login"}}
+                    </a>
+                    <a data-portal="subscribe" class="epcl-button gradient-button icon wave-button">
+                        {{t "Subscribe"}}
+                    </a>                                                           
+                {{/if}}
+            </div>
+        </div>
+	
+		<div class="grid-container">  
+
+            <div class="epcl-flex">
+                {{> site-logo }}
+                <!-- start: .main-nav -->
+                <nav class="main-nav">      
+                    {{navigation}}     
+                    <div class="border-top"><span class="dot large"></span></div>
+                    <div class="border-bottom"><span class="dot large"></span></div>  
+                    <div class="clear"></div>             
+                </nav>
+                <!-- end: .main-nav -->
+                <div class="clear"></div>            
+            </div>		
+            
+            <div class="clear"></div>
+        </div>
+		
+	</div>
+	<!-- end: .menu-wrapper -->
+	
+	<div class="clear"></div>
+
+</header>
+<!-- end: #header -->
