@@ -154,18 +154,14 @@ nav.mobile.main-nav{
     overflow: auto;
     text-align: center;
     div.close{
-        text-align: right;
-        background: $main-color;
-        color: $white;
+        text-align: center;
+        color: $main-color;
         // line-height: 42px;
         // margin-right: -20px;;
         position: absolute;
-        right: 0;
-        top: 40px;
+        right: 10px;
+        top: 10px;
         z-index: 1000;
-        border-radius: $large-border-radius 0 0 $large-border-radius;
-        padding: 7px;
-        padding-left: 14px;
         @include transition;
         cursor: pointer;
         svg{
