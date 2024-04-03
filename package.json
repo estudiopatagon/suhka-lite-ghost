@@ -1,6 +1,6 @@
 {
 	"name": "suhka-lite",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"demo": "https://ghost.estudiopatagon.com/suhka-lite",
     "engines": {
         "ghost": ">=5.0.0"
